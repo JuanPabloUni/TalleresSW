@@ -14,6 +14,4 @@ if (tableBody !== null) {
     `;
     tableBody.appendChild(row);
   }
-} else {
-    console.log("NO HAY TABLEBODY")
 }
