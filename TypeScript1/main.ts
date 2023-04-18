@@ -4,14 +4,14 @@ import { Series } from './Series';
 const tableBody = document.querySelector('#series-table tbody');
 
 if (tableBody !== null) {
-  for (const Series of lista_series) {
-    const row = document.createElement('tr');
-    row.innerHTML = `
-      <td>${Series.getId()}</td>
-      <td>${Series.getName()}</td>
-      <td>${Series.getChannel()}</td>
-      <td>${Series.getSeasons()}</td>
-    `;
-    tableBody.appendChild(row);
-  }
+    for (const series of lista_series) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${series.getId()}</td>
+          <td>${series.getName()}</td>
+          <td>${series.getChannel()}</td>
+          <td>${series.getSeasons()}</td>
+        `;
+        tableBody.appendChild(row);
+    }
 }
