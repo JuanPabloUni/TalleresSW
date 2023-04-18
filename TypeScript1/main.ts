@@ -1,4 +1,4 @@
-import { lista_series } from './Data';
+import { lista_series } from './Data.js';
 import { Series } from './Series';
 
 const tableBody = document.querySelector('#series-table tbody');

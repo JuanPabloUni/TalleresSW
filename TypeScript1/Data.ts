@@ -1,4 +1,4 @@
-import { Series } from './Series';
+import { Series } from './Series.js';
 
 export const lista_series: Series[] = [
     new Series(1, 'Game of Thrones', 'HBO', 8),
