@@ -57,3 +57,13 @@ if (tableBody !== null) {
     });
   }
 }
+
+if (tableFooter !== null) {
+  const avgSeasons = totalSeasons / totalSeries;
+  const footerRow = document.createElement('tr');
+  footerRow.innerHTML = `
+    <td colspan="3" style="text-align: right;"><strong>Average Seasons:</strong></td>
+    <td>${avgSeasons.toFixed(2)}</td>
+    `;
+  tableFooter.appendChild(footerRow);
+}

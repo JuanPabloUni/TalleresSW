@@ -46,3 +46,9 @@ if (tableBody !== null) {
         _loop_1(Series_1);
     }
 }
+if (tableFooter !== null) {
+    var avgSeasons = totalSeasons / totalSeries;
+    var footerRow = document.createElement('tr');
+    footerRow.innerHTML = "\n    <td colspan=\"3\" style=\"text-align: right;\"><strong>Average Seasons:</strong></td>\n    <td>".concat(avgSeasons.toFixed(2), "</td>\n    ");
+    tableFooter.appendChild(footerRow);
+}
