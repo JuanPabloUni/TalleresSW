@@ -16,14 +16,16 @@
             <b>{{ s.id }}</b>
           </td>
           <td>
-            <a href="#">{{ s.nombre }}</a>
+            <a href="#">{{ s.name }}</a>
           </td>
           <td>{{ s.channel }}</td>
           <td>{{ s.seasons }}</td>
-
-
         </tr>
-        <tr><td colspan='4'>Seasons average: {{seasonsAverage}}</td></tr>
+        <tr>
+          <td colspan='3'></td>
+          <td>Seasons average:</td>
+          <td class="text-right">{{seasonsAverage}}</td>
+        </tr>
       </tbody>
     </table>
   </div>

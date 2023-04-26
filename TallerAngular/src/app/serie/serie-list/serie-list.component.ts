@@ -16,12 +16,12 @@ export class SerieListComponent implements OnInit {
   getSeries(): void {
     this.serieService.getSeries().subscribe((series) => {
       this.series = series;
+      this.seasonsAverage = this.avg();
     });
   }
 
   ngOnInit() {
     this.getSeries();
-    this.seasonsAverage = this.avg();
   }
 
   private avg(): number {
