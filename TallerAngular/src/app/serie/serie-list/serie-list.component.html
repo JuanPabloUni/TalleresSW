@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-6">
+    <table class="table table-striped" id="series">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Channel</th>
+          <th>Seasons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of series; let i = index">
+          <td>
+            <b>{{ s.id }}</b>
+          </td>
+          <td>
+            <a href="#">{{ s.nombre }}</a>
+          </td>
+          <td>{{ s.channel }}</td>
+          <td>{{ s.seasons }}</td>
+
+
+        </tr>
+        <tr><td colspan='4'>Seasons average: {{seasonsAverage}}</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-5" id="cardSpace"></div>
+</div>

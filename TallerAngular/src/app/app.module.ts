@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { SerieModule } from './serie/serie.module';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { SerieModule } from './serie/serie.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     SerieModule
   ],
   providers: [],
