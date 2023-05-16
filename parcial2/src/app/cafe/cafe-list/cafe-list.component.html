@@ -1,3 +1,31 @@
-<p>
-  cafe-list works!
-</p>
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-6">
+    <table class="table table-striped" id="series">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Region</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of cafes; let i = index">
+          <td>
+            <b>{{ c.id }}</b>
+          </td>
+          <td>
+            <a href="#">{{ c.nombre }}</a>
+          </td>
+          <td>{{ c.tipo }}</td>
+          <td>{{ c.region }}</td>
+        </tr>
+      </tbody>
+    </table>
+    Total café de origen: {{ totalCafeOrigen }}
+  <br />
+    Total café blend: {{ totalCafeBlend }}
+  </div>
+  <div class="col-5" id="cardSpace"></div>
+</div>
