@@ -6,6 +6,6 @@ import { CafeDetailComponent } from './cafe-detail/cafe-detail.component';
 @NgModule({
   imports: [CommonModule],
   declarations: [CafeListComponent, CafeDetailComponent],
-  exports: [CafeListComponent]
+  exports: [CafeListComponent],
 })
 export class CafeModule { }

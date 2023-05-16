@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CafeDetail } from '../cafe-detail';
 
 @Component({
   selector: 'app-cafe-detail',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cafe-detail.component.css']
 })
 export class CafeDetailComponent implements OnInit {
+
+  @Input() cafeDetail!: CafeDetail;
 
   constructor() { }
 

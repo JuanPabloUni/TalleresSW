@@ -1,3 +1,7 @@
+<div *ngIf="selected">
+  <app-cafe-detail [cafeDetail]="selectedCafe"></app-cafe-detail>
+ </div>
+
 <div class="row">
   <div class="col-1"></div>
   <div class="col-6">
@@ -16,7 +20,7 @@
             <b>{{ c.id }}</b>
           </td>
           <td>
-            <a href="#">{{ c.nombre }}</a>
+            <a href="#" (click)="onSelected(c)">{{ c.nombre }} </a>
           </td>
           <td>{{ c.tipo }}</td>
           <td>{{ c.region }}</td>
@@ -24,7 +28,7 @@
       </tbody>
     </table>
     Total café de origen: {{ totalCafeOrigen }}
-  <br />
+    <br />
     Total café blend: {{ totalCafeBlend }}
   </div>
   <div class="col-5" id="cardSpace"></div>

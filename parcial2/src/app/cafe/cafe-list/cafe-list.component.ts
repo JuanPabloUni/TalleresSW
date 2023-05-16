@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cafe } from '../cafe';
 import { CafeService } from '../cafe.service';
+import { CafeDetail } from '../cafe-detail';
 
 @Component({
   selector: 'app-cafe-list',
@@ -9,17 +10,17 @@ import { CafeService } from '../cafe.service';
 })
 export class CafeListComponent implements OnInit {
 
-  selectedCafe!: Cafe;
+  selectedCafe!: CafeDetail;
 
   selected: Boolean = false;
 
-  cafes: Array<Cafe> = [];
+  cafes: Array<CafeDetail> = [];
   totalCafeOrigen: number = 0;
   totalCafeBlend: number = 0;
 
   constructor(private cafeService: CafeService) { }
 
-  onSelected(cafe: Cafe): void {
+  onSelected(cafe: CafeDetail): void {
     this.selected = true;
     this.selectedCafe = cafe;
   }
