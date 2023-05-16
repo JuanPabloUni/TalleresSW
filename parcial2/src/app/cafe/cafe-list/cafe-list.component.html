@@ -1,36 +1,39 @@
-
-<div class="row">
-  <div class="col-1"></div>
-  <div class="col-6">
-    <table class="table table-striped" id="series">
-      <thead class="thead-dark">
-        <tr>
-          <th>#</th>
-          <th>Nombre</th>
-          <th>Tipo</th>
-          <th>Region</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let c of cafes; let i = index">
-          <td>
-            <b>{{ c.id }}</b>
-          </td>
-          <td>
-            <a href="#" (click)="onSelected(c)">{{ c.nombre }} </a>
-          </td>
-          <td>{{ c.tipo }}</td>
-          <td>{{ c.region }}</td>
-        </tr>
-      </tbody>
-    </table>
-    Total café de origen: {{ totalCafeOrigen }}
-    <br />
-    Total café blend: {{ totalCafeBlend }}
+<div class="container">
+  <div class="list">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-6">
+        <table class="table table-striped" id="series">
+          <thead class="thead-dark">
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Region</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let c of cafes; let i = index">
+              <td>
+                <b>{{ c.id }}</b>
+              </td>
+              <td>
+                <a href="#" (click)="onSelected(c)">{{ c.nombre }} </a>
+              </td>
+              <td>{{ c.tipo }}</td>
+              <td>{{ c.region }}</td>
+            </tr>
+          </tbody>
+        </table>
+        Total café de origen: {{ totalCafeOrigen }}
+        <br />
+        Total café blend: {{ totalCafeBlend }}
+      </div>
+    </div>
   </div>
-  <div class="col-5">
-    <div *ngIf="selected">
-      <app-cafe-detail [cafeDetail]="selectedCafe"></app-cafe-detail>
-     </div>
+<div class="detailed-view">
+  <div *ngIf="selected">
+    <app-cafe-detail [cafeDetail]="selectedCafe"></app-cafe-detail>
   </div>
+</div>
 </div>
