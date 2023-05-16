@@ -1,6 +1,3 @@
-<div *ngIf="selected">
-  <app-cafe-detail [cafeDetail]="selectedCafe"></app-cafe-detail>
- </div>
 
 <div class="row">
   <div class="col-1"></div>
@@ -31,5 +28,9 @@
     <br />
     Total café blend: {{ totalCafeBlend }}
   </div>
-  <div class="col-5" id="cardSpace"></div>
+  <div class="col-5">
+    <div *ngIf="selected">
+      <app-cafe-detail [cafeDetail]="selectedCafe"></app-cafe-detail>
+     </div>
+  </div>
 </div>
